@@ -140,7 +140,7 @@ System.out.println(roundOffSav);
 System.out.println("Savings from the checkout page: " + savDouble);
 		 
 // Comparing the two Integer savings 
-if (roundOffSavings == disPrice) 
+if (roundOffSav == disPrice) 
 { 
 System.out.println("Savings Amount matches");
 } else 
