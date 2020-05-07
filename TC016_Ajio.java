@@ -131,27 +131,26 @@ savingsAmountStr = savingsAmountStr.replaceAll("[^0-9.]", "");
 		
 String[] amountSplit = savingsAmountStr.split(".", 2); 
 		
-double savingsDouble = Double.parseDouble(amountSplit[1]); 
+double savDouble = Double.parseDouble(amountSplit[1]); 
 		
 // Rounding off the Savings Double and converting to int 
-int roundOffSavings = (int)Math.round(savingsDouble); 
-System.out.println(roundOffSavings);
+int roundOffSav = (int)Math.round(savDouble); 
+System.out.println(roundOffSav);
 		
-System.out.println("Savings from the checkout page: " + savingsDouble);
+System.out.println("Savings from the checkout page: " + savDouble);
 		 
 // Comparing the two Integer savings 
 if (roundOffSavings == disPrice) 
 { 
-System.out.println("Savings Amount matches.");
+System.out.println("Savings Amount matches");
 } else 
 { 
-System.out.println("Savings Amount not matches."); 
+System.out.println("Savings Amount not matches"); 
 }
 
 //13) Click on Delete and Delete the item from Bag 
 driver.findElementByClassName("delete-btn").click(); 
 driver.findElementByXPath("//div[text()='DELETE']").click(); 
-Thread.sleep(3000); 
 
 //14) Close all the browsers
 driver.quit();
